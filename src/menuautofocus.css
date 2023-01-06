@@ -1,0 +1,109 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  height: 50px;
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.burger {
+  width: 30px;
+  height: 26px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+.burger::before,
+.burger__line,
+.burger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 2px;
+  pointer-events: none;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.overlay {
+  width: 300px;
+  height: 100px;
+  background-color: blue;
+}
+
+.nav {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+  background-color: aqua;
+}
+
+.nav--active {
+  transform: translateX(0);
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.nav__item button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+*:focus {
+  outline: 3px red solid;
+}
+
+@media (max-width: 1000px) {
+  .burger {
+    display: block;
+  }
+}

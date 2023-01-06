@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../dist/menuautofocus.min.css">
+	<title>Menu Autofocus demo</title>
+</head>
+
+<body class="body">
+	<header class="header">
+		<button class="burger" data-burger>
+			<span class="burger__line"></span>
+		</button>
+		<a href="#">Ссылка 1</a>
+		<a href="#">Ссылка 2</a>
+		<a href="#">Ссылка 3</a>
+		<div class="overlay" data-menu-overlay></div>
+		<nav class="nav" data-menu>
+			<ul class="nav__list">
+				<li class="nav__item"><button class="btn">Кнопка 1</button></li>
+				<li class="nav__item"><button>Кнопка 2</button></li>
+				<li class="nav__item"><button>Кнопка 3</button></li>
+				<li class="nav__item"><button>Кнопка 4</button></li>
+			</ul>
+			<button class="close-btn" data-close>Закрыть меню</button>
+		</nav>
+	</header>
+	<script src="../dist/menuautofocus.min.js"></script>
+	<script>
+		const menuAutofocus = new MenuAutofocus('[data-burger]');
+	</script>
+</body>
+
+</html>
